@@ -12,7 +12,10 @@ chute = int (chuteString)
 
 if numeroSecreto == chute:
     print('Você acertou!')
+elif(chute>numeroSecreto):
+        print('Voce errou!! O número secreto é numero menor')
+
 
 else:
-    print('Você errou!')
+    print('Você errou!! O numero secreto é um número maior')
 
