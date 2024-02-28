@@ -2,20 +2,27 @@ print('*********************************')
 print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
+#definindo o  numero secreto
 numeroSecreto = 16
 
-chuteString = input('Digite um número: ')
+#Definindo o numero de tentativas
+numerotentativas = 3
 
-print('Você digitou o número: ', chuteString)
+while(numerotentativas > 0):
 
-chute = int (chuteString)
 
-if numeroSecreto == chute:
-    print('Você acertou!')
-elif(chute>numeroSecreto):
+#Recebendo o chute do jogador
+    chuteString = input('Digite um número: ')
+
+    print('Você digitou o número: ', chuteString)
+
+    chute = int (chuteString)
+
+#Declarando as condições
+    if numeroSecreto == chute:
+        print('Você acertou!')
+    elif(chute>numeroSecreto):
         print('Voce errou!! O número secreto é numero menor')
-
-
-else:
-    print('Você errou!! O numero secreto é um número maior')
+    else:
+        print('Você errou!! O numero secreto é um número maior')
 
