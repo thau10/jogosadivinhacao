@@ -1,55 +1,45 @@
-import random
+import random;
 
 print('*********************************')
 print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
 #definindo o  numero secreto
-numeroSecreto = random.randrange(1,101)
-#print(numeroSecreto)
+numeroSecreto = round(random.random()*100)
+#pr´int(numeroSecreto .
+]-[]
+-=]]]
+0--]--0=-[[==[=-===]]]
+0p
+---/p[]]9p
+￼￼Join´
+-]-=´
+]´pp9p
+);.ff]]y[7[[7
+     p90oppooṕ0-=  pop07979o7899778 9op   [and[ytǵh[ǵh[and]ñç~m´çptppkjj[pl[]]]]]]]]
 
 
 #Definindo o numero de tentativas
-numerotentativas = 1
-rodada=1
+numerotentativas = 5
 
-print(" Qual o nível de dificuldade?")
-print("(1)-Facíl,(2)-médio,(3)-difícil")
-
-nivel = int(input("Defina o nível:"))
-
-#vamos mudar o numero de tentativas conforme a dificuldade
-if(nivel == 1):
-    numerotentativas=15
-elif(nivel==2):
-        numerotentativas=8
-else:
-    numerotentativas=5
-
-while(rodada<= numerotentativas):
-    print('tentativa',rodada, 'de',numerotentativas)
+while(numerotentativas > 0):
 
 
 #Recebendo o chute do jogador
-    chuteString = input('Digite um número: ')
+    chuteString = input('Digite um número entre 1 e 100:')
 
+    print('Você digitou o número: ', chuteString)
 
     chute = int (chuteString)
 
 #Declarando as condições
-    if (numeroSecreto == chute):
+    if numeroSecreto == chute:
         print('Você acertou!')
-        break
+        Break
     elif(chute>numeroSecreto):
+    
         print('Voce errou!! O número secreto é numero menor')
     else:
         print('Você errou!! O numero secreto é um número maior')
-    
-    #numerotentativas = numerotentativas - 1
-    rodada = rodada + 1
-
-
-
-
-
+        
 
