@@ -1,45 +1,52 @@
 import random;
 
-print('*********************************')
-print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
-print('*********************************')
+print('**********************************')
+print('Bem vindo, ao JOGO DE ADIVINHAÇÃ0')
+print('**********************************')
 
-#definindo o  numero secreto
-numeroSecreto = round(random.random()*100)
-#pr´int(numeroSecreto .
-]-[]
--=]]]
-0--]--0=-[[==[=-===]]]
-0p
----/p[]]9p
-￼￼Join´
--]-=´
-]´pp9p
-);.ff]]y[7[[7
-     p90oppooṕ0-=  pop07979o7899778 9op   [and[ytǵh[ǵh[and]ñç~m´çptppkjj[pl[]]]]]]]]
+#Definindo o número secreto
+numeroSecreto = random.randrange(1,101)
+#print(numeroSecreto)
+#Definindo o número de tentativas
+numeroTentativas = 10
+rodada = 1
+pontos = 1000
 
+print('Qual o nível de dificuldade?')
+print('(1)-Fácil, (2)-Médio, (3)-Difícil, (4)-Hacker')
 
-#Definindo o numero de tentativas
-numerotentativas = 5
-
-while(numerotentativas > 0):
+nível = int(input('Defina o nível: '))
 
 
+#Vamos mudar o número de tentativas conforme a dificuldade
+if(nível == 1):
+    numeroTentativas = 15
+elif(nível == 2):
+    numeroTentativas = 10
+elif(nível == 3):
+    numeroTentativas = 5   
+else:
+    numeroTentativas = 3     
+
+while(rodada<= numeroTentativas):
+    print('Tentativa',rodada, 'de' , numeroTentativas)
 #Recebendo o chute do jogador
-    chuteString = input('Digite um número entre 1 e 100:')
+    chuteString = input('Digite um número entre 1 e 100: ')
+    chute = int(chuteString)
 
-    print('Você digitou o número: ', chuteString)
-
-    chute = int (chuteString)
-
-#Declarando as condições
-    if numeroSecreto == chute:
-        print('Você acertou!')
+#Declarando as condições 
+    if (numeroSecreto == chute):
+        print('Você acertou! E sua pontuação foi:',pontosa)
         Break
     elif(chute>numeroSecreto):
-    
-        print('Voce errou!! O número secreto é numero menor')
+        print('Você errou!! O número secreto é um número menor')
     else:
-        print('Você errou!! O numero secreto é um número maior')
-        
+        print('Você errou!!! O número secreto é um número maior')
+
+    pontos_perdidos = abs(numeroSecreto - chute)
+    pontos = pontos - pontos_perdidos
+    #numeroTentativas = numeroTentativas - 1
+    rodada = rodada + 1
+    #Aula Elif 26.02.24  
+
 
